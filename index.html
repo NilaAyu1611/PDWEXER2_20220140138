@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Karir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> <!-- Your custom CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <style>
+    /* Style untuk judul tim */
+#staff {
+    color: #034e98; /* Warna biru tua */
+    margin-bottom: 30px;
+  }
+  
+  /* Style untuk deskripsi tim */
+  #staff + p {
+    color: #666; /* Warna teks abu-abu */
+    font-size: 18px;
+  }
+  
+  /* Style untuk gambar anggota tim */
+  .tim img {
+    width: 150px; /* Lebar gambar */
+    height: 150px; /* Tinggi gambar */
+    border-radius: 50%; /* Lingkaran */
+    border: 5px solid #545c5d; /* Border putih */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow ringan */
+    transition: transform 0.3s ease-in-out; /* Transisi efek hover */
+  }
+  
+  /* Efek hover pada gambar anggota tim */
+  .tim img:hover {
+    transform: scale(1.1); /* Perbesar gambar saat dihover */
+  }
+  
+  /* Style untuk nama anggota tim */
+  .tim h4 {
+    margin-top: 15px;
+    font-size: 24px; /* Ukuran font nama */
+    color: #333; /* Warna teks hitam */
+  }
+  
+  /* Style untuk posisi anggota tim */
+  .tim p {
+    margin-top: -5px;
+    font-size: 18px; /* Ukuran font posisi */
+    color: #8e8888; /* Warna teks abu-abu */
+  }
+
+   </style>
+</head>
+<body>  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fas fa-bell"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-right" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">              
+                    <li class="nav-item">
+                        <a class="nav-link" href="#choose">Choose</a>
+                    </li>   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>           
+                    <li class="nav-item">
+                        <a class="nav-link" href="#staff">Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>            
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <video class="d-block w-100" autoplay loop muted>
+                <source src="https://media.istockphoto.com/id/1405992976/id/video/manajer-proyek-berambut-pendek-yang-cantik-bekerja-di-komputer-di-kantor-ikon-media-sosial.mp4?s=mp4-640x640-is&k=20&c=A4w80nSEcwe65WApH86LurT1YBbH1onQ5T9RK7qDEmY=" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Tertarikkah Anda</h5>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <video class="d-block w-100" autoplay loop muted>
+                <source src="https://media.istockphoto.com/id/1167975301/id/video/jaringan-koneksi-thread-dalam-pikiran.mp4?s=mp4-640x640-is&k=20&c=Ck4WWrarkOPpBJDftzmEB0Hhxiaer_pZ7m97j_PGQ5c=" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Sukses</h5>
+                <p>Karir</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <video class="d-block w-100" autoplay loop muted>
+                <source src="https://media.istockphoto.com/id/1436707149/id/video/menjalankan-kecerdasan-buatan.mp4?s=mp4-640x640-is&k=20&c=1CHTO4XrQGWsZ4z4IkXETEHZPGehOOBLqGVL6RPvMCc=" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Bentuk</h5>
+                <p>Kepribadian</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+ <!--untuk courses-->
+ <section id="courses">
+    <img src="https://media.licdn.com/dms/image/C5612AQEopuUXfBExjw/article-cover_image-shrink_720_1280/0/1600956707568?e=2147483647&v=beta&t=ZO5A2-HI9xo3jbGezs9XM0wIWrca3Rai71MZgwXoaww" width="300x"/>
+    <div class="kolom">
+        <p class="deskripsi">You Will Need This</p>
+        <h1>Online Courses</h1>
+        <p>Jangan Pernah Menyerah Untuk Mengejar Mimpi <b>^_^Spirit and Camon^.^</b></p>
+      
+    </div>
+</section>
+
+    <!--  cards section-->
+  <div id = "choose" class="container mt-5" style="background-color: black;">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://www.shutterstock.com/shutterstock/photos/2284126663/display_1500/stock-photo-data-science-and-big-data-technology-scientist-computing-analysing-and-visualizing-complex-data-2284126663.jpg" class="card-img-top" alt="Clock Image" style="width: 100%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Programmer</h5>
+                    <p class="card-text">Programmer adalah suatu jenis pekerjaan yang menjanjikan di masa yang akan datang</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3XYD9imueJ3cSfuEHgVEHQIWIJy8Az2nU6CJIHqCGvbYl0dDqBoceKd-KQtGja6kVI0&usqp=CAU" class="card-img-top" alt="Clock Image" style="width: 100%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Network</h5>
+                    <p class="card-text">berkarirlah disni</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://d1pddsf91ofvl9.cloudfront.net/wp-content/uploads/2023/04/26222057/pelatihan-data-analyst-1-scaled.jpg" class="card-img-top" alt="Clock Image" style="width: 100%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Data Analist</h5>
+                    <p class="card-text">Very Experince</p>
+                </div>
+            </div>
+        </div>
+       
+        
+    </div>
+
+<!--Staff Section-->
+<div class="container-fluid pt-5 pb-5 bg-light">
+    <div class="container text-center">
+      <h2 class="display-3" id="staff"> Our Team</h2>
+      <p>Tim kami bekerja sesuai dengan bidangnya masing-masing</p>
+      <div class="row pt-4 gx-4 gy-4">
+        <div class="col-md-4 text-center tim">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2beBUgbkpBh8UGwC2y_N9nWOmFABt93fU9A&s" class="rounded-circle mb-3" />
+          <h4>Nathan</h4>
+          <p>Programmer</p>           
+        </div>
+
+        <div class="col-md-4 text-center tim">
+          <img src="https://img.lovepik.com/photo/20211121/medium/lovepik-standing-action-of-business-people-picture_500651435.jpg" class="rounded-circle mb-3" />
+          <h4>Jenner</h4>
+          <p>Jaringan</p>           
+        </div>
+
+        <div class="col-md-4 text-center tim">
+          <img src="https://img.lovepik.com/photo/20211210/medium/lovepik-business-mens-hand-holding-electronic-product-picture_501787655.jpg" class="rounded-circle mb-3" />
+          <h4>Leyya</h4>
+          <p>data Analist</p>           
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    
+    <!-- Contact Us Section -->
+<div id = "contact" class="form-card1 mt-5">
+    <div class="form-card2">
+        <form id="contact-form" class="form">
+            <p class="form-heading">Contact Us</p>
+
+            <div class="form-field">
+                <input required="" placeholder="Name" name="name" class="input-field" type="text" />
+            </div>
+
+            <div class="form-field">
+                <input required="" placeholder="Email" name="email" class="input-field" type="email" />
+            </div>
+
+            <div class="form-field">
+                <input required="" placeholder="Subject" name="subject" class="input-field" type="text" />
+            </div>
+
+            <div class="form-field">
+                <textarea required="" placeholder="Message" name="message" cols="30" rows="3" class="input-field"></textarea>
+            </div>
+
+            <button id="sendMessage-btn" class="sendMessage-btn">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="result-container"></div>
+        <button id="cancel-btn">Cancel</button>
+        <button id="save-btn">Save</button>
+    </div>
+</div>
+  
+
+
+    <!-- Footer -->
+<footer id="footer" class="text-center text-lg-start text-white">
+    <div class="container p-4 pb-0">
+        <section>
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Technology Now</h6>
+                    <p>Technology is very beautiful</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
+                    <p><a class="text-white" href="#">Your Account</a></p>
+                    <p><a class="text-white" href="#register">Register</a></p>
+                    <p><a class="text-white" href="#exhibition">All Exhibitions</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p><i class="fas fa-home mr-3"></i> Kursus Online, Yogyakarta, ID</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@kursusonline.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +01 234 111 88</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+                    <a class="btn btn-outline-light btn-floating m-1 socialContainer" role="button" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 socialContainer" role="button" href="https://youtube.com/@kmti_umy?si=oq09KVVfU127FEbo"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1 socialContainer" role="button" href="https://www.instagram.com/nilaayucitrawulan3450?igsh=MTNqMW82emh0NmtoYQ==4"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Online Courses
+    </div>
+</footer>
+
+
+<!-- Swal2 CSS and JS (Add this in the <head> or before the closing -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="script/script.js"></script>
+    </body>
+    </html>
+    
+
+
+
+
+
+
+
+
